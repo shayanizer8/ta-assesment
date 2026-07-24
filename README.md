@@ -22,14 +22,16 @@ pip install fastapi "uvicorn[standard]" "sqlalchemy>=2.0" alembic asyncpg psycop
 ```
 
 ### 1.3 Environment Variables
-Set environment variables or create a `.env` file in the project root:
+Copy `.env.example` to `.env` or set environment variables in your environment (adjusting port `5432` or `5433` depending on your local PostgreSQL setup):
 ```env
-DATABASE_URL=postgresql+asyncpg://postgres:postgres@localhost:5433/ta_assessment
-TEST_DATABASE_URL=postgresql+asyncpg://postgres:postgres@localhost:5433/ta_assessment_test
-SYNC_DATABASE_URL=postgresql+psycopg2://postgres:postgres@localhost:5433/ta_assessment
+# Standard Postgres Port 5432 (or custom port e.g. 5433)
+DATABASE_URL=postgresql+asyncpg://postgres:postgres@localhost:5432/ta_assessment
+TEST_DATABASE_URL=postgresql+asyncpg://postgres:postgres@localhost:5432/ta_assessment_test
+SYNC_DATABASE_URL=postgresql+psycopg2://postgres:postgres@localhost:5432/ta_assessment
 JWT_SECRET=ta_assessment_super_secret_jwt_key_2026_change_in_prod
 ACCESS_TOKEN_EXPIRE_MINUTES=60
 ```
+
 
 ---
 
