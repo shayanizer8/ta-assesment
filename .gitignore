@@ -214,5 +214,8 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
-# Streamlit
+# Local postgres data
+pgdata/
 .streamlit/secrets.toml
+
+
